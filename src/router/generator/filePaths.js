@@ -1,0 +1,1 @@
+/* eslint-disable */module.exports = {"Menu":"/permission/menu/Menu.vue","Role":"/permission/role/Role.vue"};

@@ -1,0 +1,15 @@
+// 此文件代码无实际意义 只是给webstorm编译器识别别名路径而已
+// 如果要启用，请在 settings -> language&frameworks -> webpack ，添加此文件的路径
+let path = require('path');
+
+function resolve (dir) {
+	return path.join(__dirname, dir);
+}
+
+module.exports = {
+	resolve: {
+		alias: {
+			'@': resolve('src')
+		}
+	}
+};
