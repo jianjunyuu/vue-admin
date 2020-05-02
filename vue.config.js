@@ -1,6 +1,6 @@
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV);
 const CompressionPlugin = require('compression-webpack-plugin');
-
+const analyzer = require('webpack-bundle-analyzer');
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-admin' : '/',
 	devServer: {
@@ -28,6 +28,9 @@ module.exports = {
 				deleteOriginalAssets: false //不删除源文件
 			}));
 			config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
+
+			const BundleAnalyzerPlugin = analyzer.BundleAnalyzerPlugin
+			config.plugins.push(new BundleAnalyzerPlugin())
 		}
 	},
 	chainWebpack: config => {

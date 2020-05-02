@@ -2,13 +2,6 @@
 
 # 确保脚本抛出遇到的错误
 set -e
-#
-#dir=vue-admin
-#repositoryDir=~/Projects/mryujianjun.github.io/
-#target=${repositoryDir}${dir}
-
-# 完整的路径
-# echo ${target}${dir}
 
 dir=vue-admin
 repository=mryujianjun.github.io
@@ -34,7 +27,6 @@ then
     echo ${target}' is deleted!!!'
 fi
 mv ${dir} ${repository}
-rm ${dir}
 
 # 部署到远程仓库 https://github.com/mryujianjun/mryujianjun.github.io.git
 cd ${repository}
