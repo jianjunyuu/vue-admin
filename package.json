@@ -16,7 +16,7 @@
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.2.0",
-    "vue-element-components": "^1.0.0"
+    "vue-element-components": "^0.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
@@ -44,13 +44,18 @@
     },
     "rules": {}
   },
+  "eslintIgnore": [
+    "dist",
+    "node_modules",
+    "vue-element-components"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
   ],
   "author": "mryujianjun.cn@gmail.com",
-  "homepage": "",
+  "homepage": "https://mryujianjun.cn/vue-admin/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mryujianjun/vue-admin.git"

@@ -11,11 +11,6 @@
 <script>
 	export default {
 		name: 'Breadcrumb',
-		data() {
-			return {
-				// paths: []
-			};
-		},
 		computed: {
 			paths() {
 				let menu = this.$route.meta['node'];

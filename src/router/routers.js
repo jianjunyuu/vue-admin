@@ -14,6 +14,31 @@ export default [
 	// 	children: [],
 	// },
 	{
+		name: 'Widget',
+		path: '/widget',
+		icon: 'el-icon-s-home',
+		title: '组件库',
+		is_menu: 1,
+		children: [
+			{
+				name: 'IMenu',
+				path: 'menu',
+				icon: 'el-icon-s-home',
+				title: 'IMenu',
+				is_menu: 1,
+				children: []
+			},
+			{
+				name: 'ITableList',
+				path: 'table-list',
+				icon: 'el-icon-s-home',
+				title: 'ITableList',
+				is_menu: 1,
+				children: []
+			}
+		]
+	},
+	{
 		name: 'Permission',
 		path: '/permission',
 		icon: 'el-icon-s-home',

@@ -1,6 +1,11 @@
 <template>
     <el-main class="main">
         <breadcrumb></breadcrumb>
+        <button @click="$router.push({name: 'IMenu'})">IMenu</button>
+        <br />
+        <button @click="$router.back()">back</button>
+        <br />
+        <button @click="$router.replace({name: 'IMenu'})">replace</button>
         <router-view></router-view>
     </el-main>
 </template>

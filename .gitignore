@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+/mryujianjun.github.io
+/vue-admin
 
 # local env files
 .env.local

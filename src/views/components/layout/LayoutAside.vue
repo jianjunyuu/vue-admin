@@ -3,7 +3,7 @@
         <i-menu
             :data="menus"
             :default-active="defaultActive"
-            router
+            @select="$router.push({name: $event})"
             :unique-opened="true">
         </i-menu>
     </el-aside>
