@@ -1,5 +1,4 @@
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV);
-const CompressionPlugin = require('compression-webpack-plugin');
 const analyzer = require('webpack-bundle-analyzer');
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-admin' : '/',
@@ -22,15 +21,11 @@ module.exports = {
 	},
 	configureWebpack: config => {
 		if (process.env.NODE_ENV === 'production') {
-			config.plugins.push(new CompressionPlugin({
-				test: /\.js$|\.html$|.\css/, //匹配文件名
-				threshold: 10240,//对超过10k的数据压缩
-				deleteOriginalAssets: false //不删除源文件
-			}));
 			config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true;
-
-			const BundleAnalyzerPlugin = analyzer.BundleAnalyzerPlugin
-			config.plugins.push(new BundleAnalyzerPlugin())
+			if (process.env.report) {
+				const BundleAnalyzerPlugin = analyzer.BundleAnalyzerPlugin;
+				config.plugins.push(new BundleAnalyzerPlugin());
+			}
 		}
 	},
 	chainWebpack: config => {

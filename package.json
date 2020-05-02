@@ -5,12 +5,14 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "cross-env report=true vue-cli-service build",
     "lint": "vue-cli-service lint",
     "eleme": "node src/components/element-ui/bin/generate-entry.js",
     "update:files": "node src/router/generator/filePathGenerator.js",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "analyz": " rm -f ./stats.json && webpack --profile --json"
   },
+  "module": "./src/main.js",
   "dependencies": {
     "core-js": "^3.6.4",
     "element-ui": "^2.13.1",
@@ -24,6 +26,7 @@
     "@vue/cli-service": "~4.3.0",
     "babel-eslint": "^10.1.0",
     "compression-webpack-plugin": "^3.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "json-templater": "latest",
@@ -31,7 +34,9 @@
     "sass-loader": "^8.0.2",
     "uppercamelcase": "latest",
     "vue-template-compiler": "^2.6.11",
-    "webpack-bundle-analyzer": "^3.7.0"
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-cli": "^3.3.11"
   },
   "eslintConfig": {
     "root": false,
