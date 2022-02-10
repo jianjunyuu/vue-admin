@@ -30,7 +30,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "json-templater": "latest",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.2",
     "uppercamelcase": "latest",
     "vue-template-compiler": "^2.6.11",
